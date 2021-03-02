@@ -1,4 +1,8 @@
-import { createStore } from "redux";
-import UserReducer from "./reducers";
+import { applyMiddleware, createStore } from "redux";
+import logger from "redux-logger";
+import thunk from "redux-thunk";
+import reducers from "./reducers";
 
-export const Store = createStore(UserReducer);
+// const middlewares = [thunk]
+
+export const Store = createStore(reducers, applyMiddleware(thunk) );

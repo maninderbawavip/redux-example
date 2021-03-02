@@ -13,7 +13,7 @@ class UserInfo extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return { userFromProps: state.user }
+    return { userFromProps: state.userTable.user }
 }
 
 export default connect(mapStateToProps)(UserInfo);

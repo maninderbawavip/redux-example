@@ -8,7 +8,7 @@ export const loadCelebsData = (value) => (dispatch) => {
         url += `/?q=${value}`
     }
     
-    //fetch this data from my server
+    //fetch this data from my server //asynchronous action
     fetch(url)
         .then(res => res.json())
         .then(data => {

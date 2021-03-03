@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { connect } from "react-redux";
+import { AppContext } from "../contexts/AppContext";
 import { loadCelebsData } from '../redux/actions'
+
 
 class Search extends Component {
 
@@ -10,6 +12,7 @@ class Search extends Component {
             value: ""
         }
     }
+    static contextType = AppContext;
 
     handleChange(value) {
         this.setState({ value })
@@ -18,6 +21,7 @@ class Search extends Component {
 
     render() {
         return (<div>
+            from search component {this.context.currentTheme}
             <input type="text"
                 value={this.state.value}
                 onChange={

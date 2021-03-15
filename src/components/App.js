@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { AppContext } from '../contexts/AppContext';
 import './App.css';
 import Celebs from './Celebs';
-import EditName from './EditName';
 import Search from './Search';
-import UserInfo from './UserInfo';
 
 class App extends Component {
 
